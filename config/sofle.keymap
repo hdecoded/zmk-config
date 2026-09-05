@@ -73,7 +73,7 @@
             &trans  &trans  &trans  &trans    &trans &trans &trans &trans &trans &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
         };
 
         raise_layer {
@@ -86,18 +86,20 @@
                    &trans       &trans       &trans       &trans       &trans &trans &trans  &trans &trans &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp K_UNDO K_REDO &inc_dec_kp PG_DN PG_UP>;
         };
 
         adjust_layer {
             display-name = "shortcuts";
             bindings = <
-&bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4               &none  &none  &none         &none          &none &trans
-&ext_power EP_TOG &none         &none         &kp LG(DEL)  &kp LG(RBKT) &kp LG(LS(T))               &none  &none  &kp LG(LS(I)) &kp LG(LS(N0)) &none &trans
-&none             &none         &kp LG(LS(S)) &kp LG(BKSP) &kp LG(LBKT) &kp LA(LBKT)               &none  &none  &none         &kp LG(LS(L))  &none &none
-&none             &none         &kp LG(LS(C)) &kp LA(DEL)  &none        &none        &none  &none  &none  &none  &none  &none  &none          &none 
-                                &trans        &trans       &trans       &trans       &trans &trans &trans &trans &trans &trans
+&bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                &none  &none            &none          &none          &none &trans
+&ext_power EP_TOG &none         &none         &kp LG(DEL)  &kp LG(RBKT) &kp LG(LS(T))               &none  &none            &kp LG(LS(I))  &kp LG(LS(N0)) &none &trans
+&none             &none         &kp LG(LS(S)) &kp LG(BKSP) &kp LG(LBKT) &kp LA(LBKT)                &none  &kp LG(LS(DOWN)) &kp LG(LS(UP)) &kp LG(LS(L))   &none &none
+&none             &none         &kp LG(LS(C)) &kp LA(DEL)  &none        &none         &none  &none  &none  &none  &none     &none          &none          &none 
+                                &trans        &trans       &trans       &trans        &trans &trans &trans &trans &trans    &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
         };
 
     };
