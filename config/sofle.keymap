@@ -73,7 +73,7 @@
             &trans  &trans  &trans  &trans    &trans &trans &trans &trans &trans &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp LG(LS(Z)) LG(Z)>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp LG(LS(Z)) LG(Z)>;
         };
 
         raise_layer {
